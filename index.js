@@ -318,7 +318,7 @@ Object.keys(lobbies).forEach((lobbyCode) => {
           questionIndex: lobby.currentQuestion,
         });
   
-        // Timer logic
+        // Timer
         let timeLeft = 10; 
         const timerInterval = setInterval(() => {
           timeLeft -= 1;
@@ -331,7 +331,7 @@ Object.keys(lobbies).forEach((lobbyCode) => {
   
         lobby.currentQuestion += 1;
         lobby.questionTimer = setTimeout(() => {
-          clearInterval(timerInterval); // Ensure the timer is cleared
+          clearInterval(timerInterval);
           sendNextQuestion();
         }, 10000); 
       } else {
