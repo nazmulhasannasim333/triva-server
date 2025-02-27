@@ -435,8 +435,6 @@ socket.on("disconnect", () => {
 
 });
 
-
-// Test route
 app.get("/", (req, res) => {
   res.send("Trivia game server is running");
 });
